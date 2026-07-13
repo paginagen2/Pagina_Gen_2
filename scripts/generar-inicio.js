@@ -1,6 +1,7 @@
 const fs = require('node:fs/promises');
 const path = require('node:path');
-const admin = require('firebase-admin');
+const { cert, initializeApp } = require('firebase-admin/app');
+const { getFirestore } = require('firebase-admin/firestore');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const OUTPUT_PATH = path.join(PROJECT_ROOT, 'datos', 'inicio.json');
@@ -77,8 +78,8 @@ async function main() {
   if (!serviceAccountRaw) throw new Error('Falta el secreto FIREBASE_SERVICE_ACCOUNT.');
 
   const serviceAccount = JSON.parse(serviceAccountRaw);
-  admin.initializeApp({ credential: admin.credential.cert(serviceAccount) });
-  const db = admin.firestore();
+  initializeApp({ credential: cert(serviceAccount) });
+  const db = getFirestore();
   const date = argentinaDateParts();
   const now = Date.now();
 
