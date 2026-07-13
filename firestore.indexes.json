@@ -1,0 +1,13 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "canal_publicaciones",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "estado", "order": "ASCENDING" },
+        { "fieldPath": "rolesDestinatarios", "arrayConfig": "CONTAINS" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

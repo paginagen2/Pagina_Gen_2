@@ -1,0 +1,11 @@
+del /s /q node_modules
+del package-lock.json
+npm install
+
+Copy-Item -Path "index.html", "biblioteca", "cancionero", "aaglobal", "aadocumentos", "index", "meditacion", "pdv", "introduccion", "links", "gen_animadores", "pasapalabra", "descargas", "congreso" -Destination "www" -Recurse -Force
+
+npx cap copy android
+
+npx cap update android
+
+npx cap open android
