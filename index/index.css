@@ -284,6 +284,16 @@ body {
 }
 
 .meditation-icon, .book-icon { font-size: 2rem; }
+.pasapalabra-symbol {
+  width: 46px;
+  height: 46px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.book-symbol { display: block; transform: translateY(-4px); }
 .daily-copy { min-width: 0; }
 .daily-copy h3 { margin: 0 0 8px; color: #fff; font-size: 1.13rem; }
 .daily-copy p {

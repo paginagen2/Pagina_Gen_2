@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gen</title>
   <link rel="stylesheet" href="aaglobal/style.css?v=20260713-auth3">
-  <link rel="stylesheet" href="index/index.css?v=20260713-sidebar2">
+  <link rel="stylesheet" href="index/index.css?v=20260713-icons1">
   <link rel="icon" href="aadocumentos/svg/casa.svg" type="image/x-icon">
   <meta name="description" content="Encuentra recursos del Movimiento Gen 2: cancionero con acordes, Palabra de Vida, experiencias, dinámicas para animadores y biblioteca digital. Únete a millones de jóvenes por la unidad.">
 
@@ -102,7 +102,13 @@
 
           <div class="daily-grid">
             <article class="daily-card" onclick="window.location.href='pasapalabra/pasapalabra_de_hoy.html'">
-              <div class="daily-icon" aria-hidden="true">?</div>
+              <div class="daily-icon" aria-hidden="true">
+                <svg class="pasapalabra-symbol" viewBox="0 0 48 48">
+                  <path d="M10 9h28a5 5 0 0 1 5 5v17a5 5 0 0 1-5 5H22l-10 7 2-7h-4a5 5 0 0 1-5-5V14a5 5 0 0 1 5-5Z"/>
+                  <path d="M19 19a6 6 0 0 1 11.5 2.3c0 4.2-6.5 4.1-6.5 8.2"/>
+                  <path d="M24 34h.01"/>
+                </svg>
+              </div>
               <div class="daily-copy">
                 <h3>Pasapalabra</h3>
                 <p class="pasapalabra-title">Cargando pasapalabra del día...</p>
@@ -122,7 +128,7 @@
             </article>
 
             <article class="daily-card" id="pdv-preview-container" onclick="window.location.href='pdv/pdv_todas.html'">
-              <div class="daily-icon book-icon" aria-hidden="true">†</div>
+              <div class="daily-icon book-icon" aria-hidden="true"><span class="book-symbol">†</span></div>
               <div class="daily-copy">
                 <h3>Palabra de Vida</h3>
                 <p class="palabra-cita" id="pdv-cita-index">Cargando Palabra de Vida...</p>
