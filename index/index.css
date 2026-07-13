@@ -33,24 +33,11 @@ body {
 .home-brand {
   display: flex;
   align-items: center;
-  gap: 8px;
   margin: 0 14px 22px;
   color: #fff;
   font-size: 1.55rem;
   font-weight: 800;
   letter-spacing: -0.04em;
-}
-
-.home-brand-mark {
-  display: grid;
-  width: 31px;
-  height: 31px;
-  place-items: center;
-  border-radius: 50% 48% 44% 50%;
-  background: linear-gradient(135deg, #a975ff, #6f3fd7);
-  font-size: 1.55rem;
-  line-height: 1;
-  box-shadow: 0 0 24px rgba(141, 92, 246, 0.35);
 }
 
 .home-nav {
