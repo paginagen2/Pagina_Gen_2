@@ -206,72 +206,9 @@
     </div>
   </div>
 
-  <!-- Modal de autenticación -->
-  <div id="auth-modal" class="modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      
-      <!-- Tabs -->
-      <div class="modal-tabs">
-        <button class="modal-tab active" data-tab="login">Iniciar Sesión</button>
-        <button class="modal-tab" data-tab="register">Registrarse</button>
-        <button class="modal-tab" data-tab="roles">Agregar Rol</button>
-      </div>
-
-      <!-- Formulario de Inicio de Sesión -->
-      <div id="tab-login" class="modal-tab-content active">
-        <form id="login-form">
-          <div class="form-group">
-            <label for="login-email">Correo electrónico</label>
-            <input type="email" id="login-email" required>
-          </div>
-          <div class="form-group">
-            <label for="login-password">Contraseña</label>
-            <input type="password" id="login-password" required>
-          </div>
-          <button type="submit" class="btn-primary">Iniciar Sesión</button>
-          <button type="button" class="btn-secondary" id="login-google">
-            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" class="google-icon">
-            Iniciar con Google
-          </button>
-        </form>
-      </div>
-
-      <!-- Formulario de Registro -->
-      <div id="tab-register" class="modal-tab-content">
-        <form id="register-form">
-          <div class="form-group">
-            <label for="register-name">Nombre</label>
-            <input type="text" id="register-name" required>
-          </div>
-          <div class="form-group">
-            <label for="register-email">Correo electrónico</label>
-            <input type="email" id="register-email" required>
-          </div>
-          <div class="form-group">
-            <label for="register-password">Contraseña</label>
-            <input type="password" id="register-password" required minlength="6">
-          </div>
-          <button type="submit" class="btn-primary">Registrarse</button>
-        </form>
-      </div>
-
-      <!-- Formulario de Código de Rol -->
-      <div id="tab-roles" class="modal-tab-content">
-        <form id="role-form">
-          <div class="form-group">
-            <label for="role-code">Código de Rol</label>
-            <input type="text" id="role-code" required>
-          </div>
-          <button type="submit" class="btn-primary">Agregar Rol</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <script src="aaglobal/firebase-config.js?v=20260712-roles1"></script>
+  <script src="aaglobal/firebase-config.js?v=20260713-auth1"></script>
   <script type="module" src="aaglobal/app-features.js"></script>
-  <script type="module" src="auth.js?v=20260713-sidebar1"></script>
+  <script type="module" src="auth.js?v=20260713-auth1"></script>
   <script type="module" src="index/index.js?v=20260713-sidebar1"></script>
 </body>
 </html>
