@@ -231,13 +231,28 @@ function setupModal() {
     setupRegisterForm();
     setupRoleForm();
     setupGoogleLogin();
+    updateRoleTabVisibility(Boolean(currentUser));
+}
+
+function updateRoleTabVisibility(isSignedIn) {
+    const modal = document.getElementById('auth-modal');
+    if (!modal) return;
+
+    const roleTab = modal.querySelector('[data-tab="roles"]');
+    const roleContent = modal.querySelector('#tab-roles');
+    if (roleTab) roleTab.hidden = !isSignedIn;
+    if (!isSignedIn && roleContent) {
+        roleContent.hidden = true;
+        roleContent.classList.remove('active');
+    }
 }
 
 function openAuthModal(tabId = 'login') {
     const modal = document.getElementById('auth-modal');
+    const requestedTab = tabId === 'roles' && !currentUser ? 'login' : tabId;
     modal.hidden = false;
     modal.classList.add('active');
-    modal.querySelector(`[data-tab="${tabId}"]`).click();
+    modal.querySelector(`[data-tab="${requestedTab}"]`).click();
 }
 
 function closeAuthModal() {
@@ -296,6 +311,7 @@ function updateAuthUI(user, profile) {
     const btnText = document.getElementById('auth-btn-text');
     const authBtn = document.getElementById('auth-btn');
     const avatar = document.getElementById('auth-avatar');
+    updateRoleTabVisibility(Boolean(user));
 
     if (!btnText || !authBtn) {
         updateSidebarRoles(profile?.roles || []);
