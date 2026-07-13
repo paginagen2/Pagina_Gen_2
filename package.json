@@ -4,7 +4,7 @@
   "description": "Es una pagina Gen!\r Porfa que esta vez ande bien!",
   "main": "index.js",
   "scripts": {
-    "test": "node --check scripts/generar-inicio.js",
+    "test": "node --check index/index.js && node --check scripts/generar-inicio.js",
     "generar-inicio": "node scripts/generar-inicio.js"
   },
   "repository": {
