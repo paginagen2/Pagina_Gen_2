@@ -183,9 +183,11 @@ function ensureAuthInterface() {
               </form>
             </div>
             <div id="tab-roles" class="auth-modal-tab-content" hidden>
+              <h2 class="auth-role-title">Agregar rol</h2>
+              <p class="auth-role-help">Ingresá el código que recibiste para sumar un rol a tu cuenta.</p>
               <form id="role-form">
-                <div class="auth-form-group"><label for="role-code">Código de rol</label><input type="text" id="role-code" required></div>
-                <button type="submit" class="auth-primary-button">Agregar rol</button>
+                <div class="auth-form-group"><label for="role-code">Código</label><input type="text" id="role-code" required></div>
+                <button type="submit" class="auth-primary-button">Canjear código</button>
               </form>
             </div>
           </div>`;
@@ -237,6 +239,7 @@ function setupModal() {
 function updateAuthTabsForSession(isSignedIn) {
     const modal = document.getElementById('auth-modal');
     if (!modal) return;
+    modal.classList.toggle('auth-modal-signed-in', isSignedIn);
 
     const loginTab = modal.querySelector('[data-tab="login"]');
     const registerTab = modal.querySelector('[data-tab="register"]');

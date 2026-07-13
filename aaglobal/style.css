@@ -342,6 +342,10 @@ p {
 .auth-modal-tab-content { display: none; }
 .auth-modal-tab-content.active { display: block; }
 
+.auth-modal-signed-in .auth-modal-tabs { display: none; }
+.auth-role-title { margin: 0 2.5rem .55rem 0; color: #fff; font-size: 1.35rem; }
+.auth-role-help { margin: 0 0 1.35rem; color: var(--text-muted); font-size: .9rem; line-height: 1.5; }
+
 .auth-form-group { margin-bottom: 1rem; }
 .auth-form-group label { display: block; margin-bottom: 0.45rem; color: #fff; }
 .auth-form-group input {
