@@ -58,16 +58,24 @@ service cloud.firestore {
     }
 
     match /canal_publicaciones/{postId} {
-      allow read: if resource.data.estado == 'publicada'
+      allow read: if isAdmin() || (
+        resource.data.estado == 'publicada'
         && (resource.data.rolesDestinatarios.size() == 0
-          || (signedIn() && resource.data.rolesDestinatarios.hasAny(userRoles())));
+          || (signedIn() && resource.data.rolesDestinatarios.hasAny(userRoles())))
+      );
       allow write: if isAdmin();
     }
 
     match /canciones/{songId} {
       allow read: if published() || isAdmin();
       allow create: if signedIn() && request.resource.data.estado == 'pendiente';
-      allow update, delete: if isAdmin();
+      allow update: if isAdmin() || (
+        resource.data.estado == 'publicado'
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['reproducciones'])
+        && request.resource.data.reproducciones is int
+        && request.resource.data.reproducciones == resource.data.reproducciones + 1
+      );
+      allow delete: if isAdmin();
     }
 
     match /recursos/{resourceId} {
@@ -81,6 +89,14 @@ service cloud.firestore {
         'carrusel', 'frases', 'meditaciones', 'pasapalabra', 'pdv'
       ];
       allow write: if isAdmin();
+    }
+
+    match /admin/{documentId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
     }
   }
 }

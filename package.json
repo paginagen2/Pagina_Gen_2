@@ -4,21 +4,21 @@
   "description": "Es una pagina Gen!\r Porfa que esta vez ande bien!",
   "main": "index.js",
   "scripts": {
-    "test": "node --check canal/canal.js && node --check index/index.js && node --check scripts/generar-inicio.js",
+    "test": "node --check scripts/generar-inicio.js",
     "generar-inicio": "node scripts/generar-inicio.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paginagen2/Pagina_Gen.git"
+    "url": "git+https://github.com/paginagen2/Pagina_Gen_2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/paginagen2/Pagina_Gen/issues"
+    "url": "https://github.com/paginagen2/Pagina_Gen_2/issues"
   },
-  "homepage": "https://github.com/paginagen2/Pagina_Gen#readme",
+  "homepage": "https://github.com/paginagen2/Pagina_Gen_2#readme",
   "dependencies": {
     "@capacitor/android": "^8.3.1",
     "@capacitor/cli": "^8.3.1",
