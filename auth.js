@@ -171,7 +171,7 @@ function ensureAuthInterface() {
                 <div class="auth-form-group"><label for="login-email">Correo electrónico</label><input type="email" id="login-email" required></div>
                 <div class="auth-form-group"><label for="login-password">Contraseña</label><input type="password" id="login-password" required></div>
                 <button type="submit" class="auth-primary-button">Iniciar sesión</button>
-                <button type="button" class="auth-secondary-button" id="login-google">Iniciar con Google</button>
+                <button type="button" class="auth-secondary-button" id="login-google"><img class="auth-google-icon" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="">Iniciar con Google</button>
               </form>
             </div>
             <div id="tab-register" class="auth-modal-tab-content" hidden>
@@ -231,25 +231,34 @@ function setupModal() {
     setupRegisterForm();
     setupRoleForm();
     setupGoogleLogin();
-    updateRoleTabVisibility(Boolean(currentUser));
+    updateAuthTabsForSession(Boolean(currentUser));
 }
 
-function updateRoleTabVisibility(isSignedIn) {
+function updateAuthTabsForSession(isSignedIn) {
     const modal = document.getElementById('auth-modal');
     if (!modal) return;
 
+    const loginTab = modal.querySelector('[data-tab="login"]');
+    const registerTab = modal.querySelector('[data-tab="register"]');
     const roleTab = modal.querySelector('[data-tab="roles"]');
+    const loginContent = modal.querySelector('#tab-login');
+    const registerContent = modal.querySelector('#tab-register');
     const roleContent = modal.querySelector('#tab-roles');
+
+    if (loginTab) loginTab.hidden = isSignedIn;
+    if (registerTab) registerTab.hidden = isSignedIn;
     if (roleTab) roleTab.hidden = !isSignedIn;
-    if (!isSignedIn && roleContent) {
-        roleContent.hidden = true;
-        roleContent.classList.remove('active');
-    }
+
+    [loginContent, registerContent, roleContent].forEach(content => {
+        if (!content) return;
+        content.hidden = true;
+        content.classList.remove('active');
+    });
 }
 
 function openAuthModal(tabId = 'login') {
     const modal = document.getElementById('auth-modal');
-    const requestedTab = tabId === 'roles' && !currentUser ? 'login' : tabId;
+    const requestedTab = currentUser ? 'roles' : (tabId === 'roles' ? 'login' : tabId);
     modal.hidden = false;
     modal.classList.add('active');
     modal.querySelector(`[data-tab="${requestedTab}"]`).click();
@@ -311,7 +320,7 @@ function updateAuthUI(user, profile) {
     const btnText = document.getElementById('auth-btn-text');
     const authBtn = document.getElementById('auth-btn');
     const avatar = document.getElementById('auth-avatar');
-    updateRoleTabVisibility(Boolean(user));
+    updateAuthTabsForSession(Boolean(user));
 
     if (!btnText || !authBtn) {
         updateSidebarRoles(profile?.roles || []);
