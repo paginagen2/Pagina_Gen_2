@@ -1,24 +1,39 @@
 {
   "schemaVersion": 1,
-  "fechaGeneracion": "2026-07-12",
-  "generadoEn": "2026-07-12T12:00:00.000Z",
-  "frase": "Que todos sean uno",
+  "fechaGeneracion": "2026-07-13",
+  "generadoEn": "2026-07-13T18:42:39.682Z",
+  "frase": "\"Que todos sean uno\"",
   "pasapalabra": {
-    "id": "fallback",
-    "titulo": "Cargando pasapalabra del día",
-    "fecha": "12/07/2026",
+    "id": "pasapalabra_1783912310071",
+    "titulo": "COMUNIÓN VIVIDA",
+    "fecha": "13/07/2026",
     "href": "pasapalabra/pasapalabra_de_hoy.html"
   },
   "meditacion": {
-    "id": "fallback",
-    "titulo": "Reflexión para hoy",
+    "id": "meditacion_1777044044877",
+    "titulo": "Dios lo sabe",
     "href": "meditacion/meditacion_diaria.html"
   },
   "palabraDeVida": {
-    "id": "fallback",
-    "mes": "Sin fecha disponible",
-    "cita": "Leé la Palabra de Vida de este mes",
-    "href": "pdv/pdv_todas.html"
+    "id": "pdv_1783885790219",
+    "mes": "Junio 2026",
+    "cita": "Por el camino, proclamen que el Reino de los Cielos está cerca. […] Ustedes han recibido gratuitamente, den también gratuitamente",
+    "href": "pdv/pdv.html?id=pdv_1783885790219"
   },
-  "novedades": []
+  "novedades": [
+    {
+      "id": "MsvasP6F9tDSYBpWMyLc",
+      "titulo": "Bruno impulsando a exigir",
+      "descripcion": "Basado en el reglamento gen",
+      "fotoUrl": "https://github.com/paginagen2/Pagina_Gen/blob/main/aadocumentos/imagenes/Publicidad_Zonitas/Rosario/WhatsApp%20Image%202026-04-07%20at%2001.41.09.jpeg?raw=true",
+      "href": ""
+    },
+    {
+      "id": "cS0EN7ShwAC35ZkuuvGn",
+      "titulo": "Joaco 😉",
+      "descripcion": "😉",
+      "fotoUrl": "https://media.licdn.com/dms/image/v2/D4D03AQG50lei0wNfAQ/profile-displayphoto-crop_800_800/B4DZuUciHCIAAI-/0/1767722070062?e=1785369600&v=beta&t=mpTX2-fyuL399X8E8P4PYP56aKyKf6SgFaF6JBu-5yY",
+      "href": ""
+    }
+  ]
 }
