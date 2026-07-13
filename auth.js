@@ -148,9 +148,10 @@ function ensureAuthInterface() {
     if (!container) {
         container = document.createElement('div');
         container.id = 'auth-button-container';
+        container.className = 'auth-sidebar-container';
+        sidebar.insertBefore(container, sidebar.firstChild);
     }
     container.className = 'auth-sidebar-container';
-    sidebar.insertBefore(container, sidebar.firstChild);
 
     if (!document.getElementById('auth-modal')) {
         const modal = document.createElement('div');
@@ -322,9 +323,10 @@ function updateAuthUI(user, profile) {
 function updateSidebarRoles(roles = currentUserProfile?.roles || []) {
     const sidebar = document.querySelector('.sidebar');
     if (!sidebar) return;
+    const roleContainer = sidebar.querySelector('#sidebar-role-links') || sidebar;
 
     // Eliminar roles anteriores si existen
-    const existingRoleLinks = sidebar.querySelectorAll('.role-link');
+    const existingRoleLinks = roleContainer.querySelectorAll('.role-link');
     existingRoleLinks.forEach(link => link.remove());
 
     if (!currentUser) return;
@@ -338,7 +340,7 @@ function updateSidebarRoles(roles = currentUserProfile?.roles || []) {
             <img src="${new URL('aadocumentos/svg/llave.svg', import.meta.url).href}" alt="Admin" class="menu-icon">
             <span class="menu-text">Administrador</span>
         `;
-        sidebar.appendChild(adminLink);
+        roleContainer.appendChild(adminLink);
     }
 
     // Aquí puedes agregar más roles según necesites

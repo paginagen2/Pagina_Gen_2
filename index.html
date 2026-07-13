@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gen</title>
-  <link rel="stylesheet" href="aaglobal/style.css">
-  <link rel="stylesheet" href="index/index.css">
+  <link rel="stylesheet" href="aaglobal/style.css?v=20260713-sidebar1">
+  <link rel="stylesheet" href="index/index.css?v=20260713-sidebar1">
   <link rel="icon" href="aadocumentos/svg/casa.svg" type="image/x-icon">
   <meta name="description" content="Encuentra recursos del Movimiento Gen 2: cancionero con acordes, Palabra de Vida, experiencias, dinámicas para animadores y biblioteca digital. Únete a millones de jóvenes por la unidad.">
 
@@ -41,25 +41,33 @@
           <img src="aadocumentos/svg/casa.svg" alt="" class="menu-icon">
           <span class="menu-text">Inicio</span>
         </a>
-        <a href="#contenido-hoy" class="menu-item">
-          <span class="menu-symbol" aria-hidden="true">◇</span>
-          <span class="menu-text">Contenido de hoy</span>
-        </a>
-        <a href="#recursos" class="menu-item">
-          <span class="menu-symbol" aria-hidden="true">□</span>
-          <span class="menu-text">Recursos</span>
-        </a>
-        <a href="#novedades" class="menu-item">
-          <span class="menu-symbol" aria-hidden="true">◁</span>
-          <span class="menu-text">Novedades</span>
-        </a>
-        <a href="canal/canal.html" class="menu-item">
+        <a href="canal/canal.html" class="menu-item communication-menu-item">
           <span class="menu-symbol" aria-hidden="true">◎</span>
-          <span class="menu-text">Canal</span>
+          <span class="menu-text">Comunicación</span>
         </a>
+
+        <span class="home-nav-label">Recursos</span>
+        <a href="cancionero/cancionero.html" class="menu-item">
+          <span class="menu-symbol" aria-hidden="true">♫</span>
+          <span class="menu-text">Cancionero</span>
+        </a>
+        <a href="gen_animadores/gen-animadores.html" class="menu-item">
+          <span class="menu-symbol" aria-hidden="true">✦</span>
+          <span class="menu-text">Gen Animadores</span>
+        </a>
+        <a href="biblioteca/biblioteca.html" class="menu-item">
+          <span class="menu-symbol" aria-hidden="true">▤</span>
+          <span class="menu-text">Biblioteca</span>
+        </a>
+        <a href="descargas/descargas.html" class="menu-item">
+          <span class="menu-symbol" aria-hidden="true">⇩</span>
+          <span class="menu-text">Descargas</span>
+        </a>
+
+        <span class="home-nav-label">Información</span>
         <a href="introduccion/introduccion.html" class="menu-item">
           <img src="aadocumentos/svg/libro.svg" alt="" class="menu-icon">
-          <span class="menu-text">Sobre el Movimiento</span>
+          <span class="menu-text">Conocé Gen 2</span>
         </a>
         <a href="links/links.html" class="menu-item">
           <span class="menu-symbol" aria-hidden="true">♡</span>
@@ -67,11 +75,10 @@
         </a>
       </nav>
 
-      <blockquote class="home-quote">
-        <span aria-hidden="true">“</span>
-        <p>Donde dos o tres están reunidos en mi nombre, allí estoy yo en medio de ellos.</p>
-        <cite>Mateo 18,20</cite>
-      </blockquote>
+      <div class="sidebar-account-area">
+        <div id="sidebar-role-links" class="sidebar-role-links"></div>
+        <div id="auth-button-container" class="auth-sidebar-container"></div>
+      </div>
     </aside>
 
     <div class="main-content home-main-content">
@@ -86,7 +93,9 @@
         <section class="dashboard-section" id="contenido-hoy" aria-labelledby="contenido-title">
           <div class="section-heading">
             <div>
-              <span class="section-icon" aria-hidden="true">▣</span>
+              <span class="section-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
+              </span>
               <h2 id="contenido-title">Contenido de hoy</h2>
             </div>
             <a href="pasapalabra/pasapalabra.html">Ver archivo <span aria-hidden="true">›</span></a>
@@ -129,7 +138,9 @@
           <section class="dashboard-section resources-section" id="recursos" aria-labelledby="recursos-title">
             <div class="section-heading">
               <div>
-                <span class="section-icon" aria-hidden="true">□</span>
+                <span class="section-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M3 7h7l2 2h9v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Zm0 4h18"/></svg>
+                </span>
                 <h2 id="recursos-title">Recursos</h2>
               </div>
             </div>
@@ -165,7 +176,9 @@
           <section class="dashboard-section news-section" id="novedades" aria-labelledby="novedades-title">
             <div class="section-heading">
               <div>
-                <span class="section-icon" aria-hidden="true">◁</span>
+                <span class="section-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m4 13 12-6v10L4 13Zm12-2h3a2 2 0 0 1 0 4h-3M7 15l1 5h4l-2-4"/></svg>
+                </span>
                 <h2 id="novedades-title">Novedades</h2>
               </div>
               <a href="canal/canal.html">Ver todas <span aria-hidden="true">›</span></a>
@@ -184,10 +197,10 @@
           </section>
         </div>
 
-        <footer class="home-footer">
-          <a href="links/links.html"><span aria-hidden="true">✉</span><span><strong>Contacto</strong><small>Conectá con nosotros</small></span></a>
-          <a href="introduccion/introduccion.html"><span aria-hidden="true">◉</span><span><strong>Movimiento Gen 2</strong><small>Que todos sean uno</small></span></a>
-          <a href="canal/canal.html"><span aria-hidden="true">◷</span><span><strong>Canal de comunicación</strong><small id="canal-preview-text">Cargando novedades...</small></span></a>
+        <footer class="home-footer" aria-label="Accesos de información y comunicación">
+          <a href="canal/canal.html" class="footer-link footer-communication"><span aria-hidden="true">◎</span><span><strong>Comunicación</strong><small>Noticias generales y contenido para tu zona.</small><em id="canal-preview-text">Cargando última novedad...</em></span></a>
+          <a href="links/links.html" class="footer-link"><span aria-hidden="true">✉</span><span><strong>Contacto</strong><small>Escribinos o encontrá nuestras redes.</small></span></a>
+          <a href="introduccion/introduccion.html" class="footer-link"><span aria-hidden="true">◉</span><span><strong>Conocé Gen 2</strong><small>Nuestra historia, identidad y espiritualidad.</small></span></a>
           <span id="canal-subtitulo" hidden>Novedades generales y de tus zonas</span>
         </footer>
       </main>
@@ -259,7 +272,7 @@
 
   <script src="aaglobal/firebase-config.js?v=20260712-roles1"></script>
   <script type="module" src="aaglobal/app-features.js"></script>
-  <script type="module" src="auth.js?v=20260712-roles2"></script>
-  <script type="module" src="index/index.js?v=20260713-daily1"></script>
+  <script type="module" src="auth.js?v=20260713-sidebar1"></script>
+  <script type="module" src="index/index.js?v=20260713-sidebar1"></script>
 </body>
 </html>

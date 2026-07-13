@@ -442,13 +442,22 @@ function renderizarCarrusel() {
     // Renderizar slides
     slidesContainer.innerHTML = carruselData.map((item, index) => `
         <div class="carrusel-slide ${item.fotoUrl ? '' : 'sin-imagen'}" ${item.href ? `onclick="window.location.href='${item.href}'" style="cursor:pointer"` : ''}>
-            ${item.fotoUrl ? `<img src="${item.fotoUrl}" alt="${item.titulo || ''}" loading="${index === 0 ? 'eager' : 'lazy'}" decoding="async">` : ''}
+            ${item.fotoUrl ? `<div class="carrusel-media"><img src="${item.fotoUrl}" alt="${item.titulo || ''}" loading="${index === 0 ? 'eager' : 'lazy'}" decoding="async"></div>` : ''}
             <div class="carrusel-slide-content">
+                <span class="news-kicker">Comunicación</span>
                 ${item.titulo ? `<h3>${item.titulo}</h3>` : ''}
                 ${item.descripcion ? `<p>${item.descripcion}</p>` : ''}
             </div>
         </div>
     `).join('');
+
+    slidesContainer.querySelectorAll('.carrusel-slide img').forEach(image => {
+        image.addEventListener('error', () => {
+            const slide = image.closest('.carrusel-slide');
+            image.closest('.carrusel-media')?.remove();
+            slide?.classList.add('sin-imagen');
+        }, { once: true });
+    });
 
     // Renderizar dots
     dotsContainer.innerHTML = carruselData.map((_, index) => `
