@@ -5,7 +5,7 @@
   --home-border: #303740;
   --home-text: #f7f7fb;
   --home-muted: #aeb4bf;
-  --home-purple: #8d5cf6;
+  --home-purple: #aa7cff;
   --home-purple-soft: rgba(141, 92, 246, 0.16);
 }
 
@@ -162,12 +162,12 @@ body {
 }
 
 .hero-banner {
-  min-height: 218px;
+  min-height: 174px;
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 24px;
-  padding: 42px 62px;
+  margin-bottom: 20px;
+  padding: 30px 54px;
   overflow: hidden;
   border: 1px solid rgba(141, 92, 246, 0.28);
   border-radius: 17px;
@@ -191,7 +191,7 @@ body {
   margin: 0;
   color: #fff;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(4rem, 6vw, 6.3rem);
+  font-size: clamp(3.6rem, 5.2vw, 5.4rem);
   font-style: italic;
   font-weight: 500;
   line-height: 0.88;
@@ -200,7 +200,7 @@ body {
 }
 
 .hero-banner p {
-  margin: 23px 0 0 10px;
+  margin: 18px 0 0 8px;
   color: #cbb4ff;
   font-size: clamp(1.3rem, 2vw, 2rem);
   line-height: 1.15;
@@ -218,8 +218,8 @@ body {
 
 .section-heading > div { display: flex; align-items: center; gap: 10px; }
 .section-heading h2 { margin: 0; color: #fff; font-size: 1.45rem; letter-spacing: -0.025em; }
-.section-heading a { color: var(--home-purple); font-size: 0.86rem; font-weight: 650; }
-.section-heading a:hover { color: #b694ff; }
+.section-heading a { color: var(--home-purple); font-size: 0.86rem; font-weight: 700; }
+.section-heading a:hover { color: #d2bdff; }
 .section-icon {
   width: 31px;
   height: 31px;
@@ -244,9 +244,11 @@ body {
 
 .daily-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
+
+.monthly-card { grid-column: 1 / -1; }
 
 .daily-card {
   min-width: 0;
@@ -309,7 +311,7 @@ body {
   -webkit-line-clamp: 3;
 }
 .daily-meta { display: block; margin-top: 8px; color: #777f8b; font-size: 0.72rem; }
-.card-arrow { color: var(--home-purple); font-size: 2rem; line-height: 1; }
+.card-arrow { color: #bd9aff; font-size: 2rem; line-height: 1; }
 
 .dashboard-lower-grid {
   display: grid;
@@ -476,7 +478,7 @@ body {
   .home-sidebar.sidebar, .home-sidebar.sidebar:hover { width: 176px; }
   .home-main-content { margin-left: 176px; }
   .home-dashboard.main { padding-inline: 25px; }
-  .daily-grid { grid-template-columns: 1fr; }
+  .daily-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .daily-card { min-height: 128px; }
   .carrusel-slide { grid-template-columns: minmax(260px, 43%) minmax(0, 1fr); }
 }
@@ -487,7 +489,8 @@ body {
   .home-brand { margin-inline: auto; }
   .home-main-content { margin-left: 70px; }
   .home-dashboard.main { padding: 18px; }
-  .hero-banner { min-height: 190px; padding: 30px; }
+  .hero-banner { min-height: 160px; padding: 26px 30px; }
+  .daily-grid { grid-template-columns: 1fr; }
   .resources-grid { grid-template-columns: repeat(2, 1fr); }
   .carrusel-slide-content { padding-inline: 28px 58px; }
   .home-footer { grid-template-columns: 1fr; }
