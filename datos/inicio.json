@@ -1,17 +1,12 @@
 {
   "schemaVersion": 1,
-  "fechaGeneracion": "2026-07-22",
-  "generadoEn": "2026-07-22T06:02:38.605Z",
+  "fechaGeneracion": "2026-07-23",
+  "generadoEn": "2026-07-23T06:08:17.766Z",
   "frase": "\"Que todos sean uno\"",
-  "pasapalabra": {
-    "id": "pasapalabra_1784696822769",
-    "titulo": "PERSEVERAR",
-    "fecha": "22/07/2026",
-    "href": "pasapalabra/pasapalabra_de_hoy.html"
-  },
+  "pasapalabra": null,
   "meditacion": {
-    "id": "meditacion_1777044080259",
-    "titulo": "\"Morir o padecer\"",
+    "id": "meditacion_1777044095236",
+    "titulo": "El dolor",
     "href": "meditacion/meditacion_diaria.html"
   },
   "palabraDeVida": {
