@@ -1,12 +1,17 @@
 {
   "schemaVersion": 1,
-  "fechaGeneracion": "2026-07-23",
-  "generadoEn": "2026-07-23T06:08:17.766Z",
+  "fechaGeneracion": "2026-07-24",
+  "generadoEn": "2026-07-24T06:02:16.715Z",
   "frase": "\"Que todos sean uno\"",
-  "pasapalabra": null,
+  "pasapalabra": {
+    "id": "pasapalabra_1784862088773",
+    "titulo": "RECORRER EL CAMINO DEL DIÁLOGO",
+    "fecha": "24/07/2026",
+    "href": "pasapalabra/pasapalabra_de_hoy.html"
+  },
   "meditacion": {
-    "id": "meditacion_1777044095236",
-    "titulo": "El dolor",
+    "id": "meditacion_1776044353106",
+    "titulo": "El hábito de los cristianos",
     "href": "meditacion/meditacion_diaria.html"
   },
   "palabraDeVida": {
